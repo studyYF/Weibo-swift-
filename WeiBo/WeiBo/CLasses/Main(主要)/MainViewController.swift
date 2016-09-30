@@ -37,6 +37,8 @@ extension MainViewController {
 //        composeButton.setImage(UIImage(named: "tabbar_compose_icon_add_highlighted"), forState: .Selected)
         composeButton.sizeToFit()
         composeButton.center = CGPointMake(tabBar.center.x, tabBar.bounds.size.height * 0.5)
+        //selector 有两种写法 1.Selector("composeButoonAction")  2."composeButoonAction"
+        composeButton.addTarget(self, action: Selector("composeButoonAction"), forControlEvents: .TouchUpInside)
         tabBar .addSubview(composeButton)
     }
     
@@ -49,6 +51,15 @@ extension MainViewController {
             }
             item.selectedImage = UIImage(named: seletecdImageName[i] + "_highlighted")
         }
+    }
+}
+
+//MARK: - 事件监听
+extension MainViewController {
+    //这里函数前面不能添加private,如果声明称private,则该方法不会添加到方法列表中,那么按钮的点击事件就找不到该方法
+    //如果在private前面加上@objc ,那么该方法会被添加到方法列表,
+    @objc private func composeButoonAction () {
+        print("不能声明称private")
     }
 }
 

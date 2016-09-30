@@ -19,6 +19,9 @@
 		B83C32C31D9E1B44007D7C3B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83C32C21D9E1B44007D7C3B /* Profile.storyboard */; };
 		B83C32C61D9E2943007D7C3B /* Null.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83C32C41D9E2943007D7C3B /* Null.storyboard */; };
 		B83C32CA1D9E40DC007D7C3B /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83C32C91D9E40DB007D7C3B /* UIButton-Extension.swift */; };
+		B83C32D01D9E4C07007D7C3B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83C32CF1D9E4C07007D7C3B /* BaseViewController.swift */; };
+		B83C32D21D9E4E6F007D7C3B /* VistorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83C32D11D9E4E6F007D7C3B /* VistorView.swift */; };
+		B83C32D41D9E4E9B007D7C3B /* VistorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B83C32D31D9E4E9B007D7C3B /* VistorView.xib */; };
 		B89933811D9D6E34005B56AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89933801D9D6E34005B56AD /* AppDelegate.swift */; };
 		B89933881D9D6E34005B56AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B89933871D9D6E34005B56AD /* Assets.xcassets */; };
 		B89933961D9D6E34005B56AD /* WeiBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89933951D9D6E34005B56AD /* WeiBoTests.swift */; };
@@ -55,6 +58,9 @@
 		B83C32C21D9E1B44007D7C3B /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = ../../Profile.storyboard; sourceTree = "<group>"; };
 		B83C32C51D9E2943007D7C3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Null.storyboard; sourceTree = "<group>"; };
 		B83C32C91D9E40DB007D7C3B /* UIButton-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton-Extension.swift"; sourceTree = "<group>"; };
+		B83C32CF1D9E4C07007D7C3B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B83C32D11D9E4E6F007D7C3B /* VistorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistorView.swift; sourceTree = "<group>"; };
+		B83C32D31D9E4E9B007D7C3B /* VistorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VistorView.xib; sourceTree = "<group>"; };
 		B899337D1D9D6E34005B56AD /* WeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89933801D9D6E34005B56AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B89933871D9D6E34005B56AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,6 +132,8 @@
 		B80164291D9D747300F9A0BF /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				B83C32CB1D9E4B9B007D7C3B /* Resource */,
+				B83C32CC1D9E4B9B007D7C3B /* VistorView */,
 				B801642C1D9D761900F9A0BF /* MainViewController.swift */,
 			);
 			path = "Main(主要)";
@@ -163,6 +171,23 @@
 				B83C32C91D9E40DB007D7C3B /* UIButton-Extension.swift */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		B83C32CB1D9E4B9B007D7C3B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B83C32CC1D9E4B9B007D7C3B /* VistorView */ = {
+			isa = PBXGroup;
+			children = (
+				B83C32CF1D9E4C07007D7C3B /* BaseViewController.swift */,
+				B83C32D11D9E4E6F007D7C3B /* VistorView.swift */,
+				B83C32D31D9E4E9B007D7C3B /* VistorView.xib */,
+			);
+			path = VistorView;
 			sourceTree = "<group>";
 		};
 		B89933741D9D6E34005B56AD = {
@@ -321,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B83C32C61D9E2943007D7C3B /* Null.storyboard in Resources */,
+				B83C32D41D9E4E9B007D7C3B /* VistorView.xib in Resources */,
 				B83C32C31D9E1B44007D7C3B /* Profile.storyboard in Resources */,
 				B83C32BC1D9E1AD7007D7C3B /* Home.storyboard in Resources */,
 				B89933881D9D6E34005B56AD /* Assets.xcassets in Resources */,
@@ -353,9 +379,11 @@
 			files = (
 				B801643B1D9D780800F9A0BF /* ProfileViewController.swift in Sources */,
 				B83C32CA1D9E40DC007D7C3B /* UIButton-Extension.swift in Sources */,
+				B83C32D21D9E4E6F007D7C3B /* VistorView.swift in Sources */,
 				B89933811D9D6E34005B56AD /* AppDelegate.swift in Sources */,
 				B801642D1D9D761900F9A0BF /* MainViewController.swift in Sources */,
 				B80164371D9D77EB00F9A0BF /* MessageViewController.swift in Sources */,
+				B83C32D01D9E4C07007D7C3B /* BaseViewController.swift in Sources */,
 				B80164351D9D77D900F9A0BF /* HomeViewController.swift in Sources */,
 				B80164391D9D77F900F9A0BF /* DiscoverViewController.swift in Sources */,
 			);
