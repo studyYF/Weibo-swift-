@@ -11,13 +11,6 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitordiscover_feed_mask_smallicon" translatesAutoresizingMaskIntoConstraints="NO" id="qLZ-WO-eAt">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="460"/>
-                    <animations/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="460" id="7U7-GM-CJu"/>
-                    </constraints>
-                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitordiscover_feed_image_smallicon" translatesAutoresizingMaskIntoConstraints="NO" id="k58-CO-a4m">
                     <rect key="frame" x="213" y="143" width="175" height="175"/>
                     <animations/>
@@ -26,7 +19,7 @@
                         <constraint firstAttribute="height" constant="175" id="DHi-Fk-TGd"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitordiscover_feed_image_house" translatesAutoresizingMaskIntoConstraints="NO" id="rJn-iL-Ety">
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitordiscover_feed_image_house" translatesAutoresizingMaskIntoConstraints="NO" id="rJn-iL-Ety">
                     <rect key="frame" x="253" y="206" width="94" height="90"/>
                     <animations/>
                     <constraints>
@@ -34,7 +27,7 @@
                         <constraint firstAttribute="height" constant="90" id="xFG-Ik-0N4"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关注一些人,回这里看看有什么惊喜" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7Q-F9-5dq">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关注一些人,回这里看看有什么惊喜" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7Q-F9-5dq">
                     <rect key="frame" x="193" y="343" width="215" height="17"/>
                     <animations/>
                     <constraints>
@@ -71,10 +64,8 @@
             <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="grA-EZ-ia9" firstAttribute="trailing" secondItem="G7Q-F9-5dq" secondAttribute="trailing" id="3pY-DN-XmS"/>
-                <constraint firstItem="qLZ-WO-eAt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="81L-fy-4Hl"/>
                 <constraint firstItem="SHe-d6-Td0" firstAttribute="top" secondItem="rJn-iL-Ety" secondAttribute="bottom" constant="99" id="923-gz-xdL"/>
                 <constraint firstItem="rJn-iL-Ety" firstAttribute="centerX" secondItem="k58-CO-a4m" secondAttribute="centerX" id="9fm-eF-cjK"/>
-                <constraint firstItem="qLZ-WO-eAt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="A9t-eW-bHl"/>
                 <constraint firstItem="rJn-iL-Ety" firstAttribute="centerY" secondItem="k58-CO-a4m" secondAttribute="centerY" constant="20" id="AQQ-K0-a2u"/>
                 <constraint firstItem="grA-EZ-ia9" firstAttribute="trailing" secondItem="G7Q-F9-5dq" secondAttribute="trailing" id="M3Z-aZ-ioC"/>
                 <constraint firstItem="G7Q-F9-5dq" firstAttribute="top" secondItem="rJn-iL-Ety" secondAttribute="bottom" constant="47" id="OlJ-YY-wAm"/>
@@ -82,16 +73,21 @@
                 <constraint firstItem="k58-CO-a4m" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-70" id="fHO-8Z-iPa"/>
                 <constraint firstItem="k58-CO-a4m" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gRs-Uf-Wkv"/>
                 <constraint firstItem="SHe-d6-Td0" firstAttribute="leading" secondItem="G7Q-F9-5dq" secondAttribute="leading" id="hDs-b7-9wL"/>
-                <constraint firstAttribute="trailing" secondItem="qLZ-WO-eAt" secondAttribute="trailing" id="pNw-On-4Dz"/>
                 <constraint firstItem="G7Q-F9-5dq" firstAttribute="centerX" secondItem="k58-CO-a4m" secondAttribute="centerX" id="pUz-R2-prN"/>
             </constraints>
-            <point key="canvasLocation" x="237" y="335"/>
+            <connections>
+                <outlet property="iconView" destination="rJn-iL-Ety" id="Ddn-CT-xTb"/>
+                <outlet property="loginButton" destination="grA-EZ-ia9" id="HQA-fg-dMW"/>
+                <outlet property="registerButton" destination="SHe-d6-Td0" id="6ds-f0-xdz"/>
+                <outlet property="rotationView" destination="k58-CO-a4m" id="H2d-5D-pqW"/>
+                <outlet property="tipLabel" destination="G7Q-F9-5dq" id="Tef-my-zc3"/>
+            </connections>
+            <point key="canvasLocation" x="86" y="339"/>
         </view>
     </objects>
     <resources>
         <image name="common_button_white_disable" width="11" height="9"/>
         <image name="visitordiscover_feed_image_house" width="94" height="90"/>
         <image name="visitordiscover_feed_image_smallicon" width="175" height="175"/>
-        <image name="visitordiscover_feed_mask_smallicon" width="175" height="175"/>
     </resources>
 </document>

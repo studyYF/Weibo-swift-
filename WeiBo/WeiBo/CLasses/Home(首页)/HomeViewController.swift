@@ -10,87 +10,67 @@ import UIKit
 
 class HomeViewController: BaseViewController {
 
-    
+    //MARK: - 懒加载属性
+    private lazy var titleButton : TitleButton = TitleButton()
+    //这里的闭包会造成循环引用,所以需要进行处理[weak self],处理后,self变成了可选类型,所以要对self解包
+    private lazy var popoverAnimation : PopoverViewAnimation = PopoverViewAnimation { [weak self] (isPresented) -> () in
+         self!.titleButton.selected = isPresented
+    }
+    //MARK: - 系统会掉函数
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        vistorView.setAnimation()
+        ///如果没有登录,直接返回
+        if !isLogin {
+            return
+        }
+        ///设置导航栏内容
+        setUpNavigationBar()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
+//MARK: - 设置UI界面
+extension HomeViewController {
+    private func setUpNavigationBar() {
+        //设置左侧item(将下面的方法抽取出来,在UIBarButtonItem里面)
+//        let leftButton = UIButton()
+//        leftButton.setImage(UIImage(named: "navigationbar_friendattention"), forState: .Normal)
+//        leftButton.setImage(UIImage(named: "navigationbar_friendattention_highlighted"), forState: .Highlighted)
+//        leftButton.sizeToFit()
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftButton)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "navigationbar_friendattention")
+        
+        //设置右侧的item
+//        let rightButton = UIButton()
+//        rightButton.setImage(UIImage(named: "navigationbar_pop"), forState: .Normal)
+//        rightButton.setImage(UIImage(named: "navigationbar_pop_highlighted"), forState: .Highlighted)
+//        rightButton.sizeToFit()
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightButton)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(imageName: "navigationbar_pop")
+        //设置中间的titleView(将自定义创建button方法抽取到TitleButton类里面)
+//        titleButton.setImage(UIImage(named: "navigationbar_arrow_down"), forState: .Normal)
+//        titleButton.setImage(UIImage(named: "navigationbar_arrow_up"), forState: .Selected)
+//        titleButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        titleButton.setTitle("我的微博", forState: .Normal)
+        titleButton.addTarget(self, action: "titleButtonClick", forControlEvents: .TouchUpInside)
+//        titleButton.sizeToFit()
+        navigationItem.titleView = titleButton
+    }
+}
+//MARK: - 事件监听函数
+extension HomeViewController {
+    @objc private func titleButtonClick() {
+        
+        //弹出自定义控制器
+        let popVC = PopoverViewController()
+        popVC.modalPresentationStyle = .Custom
+        //自定义转场
+        popVC.transitioningDelegate = popoverAnimation
+        popoverAnimation.presentFrame = CGRectMake(UIScreen.mainScreen().bounds.width * 0.5 - 90, 55, 180, 250)
+        presentViewController(popVC, animated: true, completion: nil)
+    }
+}
+
+

@@ -12,6 +12,11 @@
 		B80164371D9D77EB00F9A0BF /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80164361D9D77EB00F9A0BF /* MessageViewController.swift */; };
 		B80164391D9D77F900F9A0BF /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80164381D9D77F900F9A0BF /* DiscoverViewController.swift */; };
 		B801643B1D9D780800F9A0BF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B801643A1D9D780800F9A0BF /* ProfileViewController.swift */; };
+		B83A77521DA0E0AE00F4A8CD /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A77511DA0E0AE00F4A8CD /* UIBarButtonItem-Extension.swift */; };
+		B83A77541DA0E41A00F4A8CD /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A77531DA0E41A00F4A8CD /* TitleButton.swift */; };
+		B83A775A1DA0E9F300F4A8CD /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A77581DA0E9F300F4A8CD /* PopoverViewController.swift */; };
+		B83A775B1DA0E9F300F4A8CD /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B83A77591DA0E9F300F4A8CD /* PopoverViewController.xib */; };
+		B83A775D1DA0EFE500F4A8CD /* WBPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A775C1DA0EFE500F4A8CD /* WBPresentationController.swift */; };
 		B83C32B91D9E166C007D7C3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83C32B71D9E166C007D7C3B /* Main.storyboard */; };
 		B83C32BC1D9E1AD7007D7C3B /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83C32BA1D9E1AD7007D7C3B /* Home.storyboard */; };
 		B83C32BE1D9E1B1F007D7C3B /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83C32BD1D9E1B1F007D7C3B /* Message.storyboard */; };
@@ -22,6 +27,7 @@
 		B83C32D01D9E4C07007D7C3B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83C32CF1D9E4C07007D7C3B /* BaseViewController.swift */; };
 		B83C32D21D9E4E6F007D7C3B /* VistorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83C32D11D9E4E6F007D7C3B /* VistorView.swift */; };
 		B83C32D41D9E4E9B007D7C3B /* VistorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B83C32D31D9E4E9B007D7C3B /* VistorView.xib */; };
+		B84118811DA163450014DCDD /* PopoverViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84118801DA163450014DCDD /* PopoverViewAnimation.swift */; };
 		B89933811D9D6E34005B56AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89933801D9D6E34005B56AD /* AppDelegate.swift */; };
 		B89933881D9D6E34005B56AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B89933871D9D6E34005B56AD /* Assets.xcassets */; };
 		B89933961D9D6E34005B56AD /* WeiBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89933951D9D6E34005B56AD /* WeiBoTests.swift */; };
@@ -51,6 +57,11 @@
 		B80164361D9D77EB00F9A0BF /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		B80164381D9D77F900F9A0BF /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		B801643A1D9D780800F9A0BF /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B83A77511DA0E0AE00F4A8CD /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
+		B83A77531DA0E41A00F4A8CD /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
+		B83A77581DA0E9F300F4A8CD /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		B83A77591DA0E9F300F4A8CD /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
+		B83A775C1DA0EFE500F4A8CD /* WBPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBPresentationController.swift; sourceTree = "<group>"; };
 		B83C32B81D9E166C007D7C3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B83C32BB1D9E1AD7007D7C3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		B83C32BD1D9E1B1F007D7C3B /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Message.storyboard; path = ../../Message.storyboard; sourceTree = "<group>"; };
@@ -61,6 +72,7 @@
 		B83C32CF1D9E4C07007D7C3B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B83C32D11D9E4E6F007D7C3B /* VistorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistorView.swift; sourceTree = "<group>"; };
 		B83C32D31D9E4E9B007D7C3B /* VistorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VistorView.xib; sourceTree = "<group>"; };
+		B84118801DA163450014DCDD /* PopoverViewAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewAnimation.swift; sourceTree = "<group>"; };
 		B899337D1D9D6E34005B56AD /* WeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89933801D9D6E34005B56AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B89933871D9D6E34005B56AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -123,6 +135,7 @@
 		B80164281D9D747300F9A0BF /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
+				B83A77551DA0E99900F4A8CD /* UIPopover */,
 				B83C32BA1D9E1AD7007D7C3B /* Home.storyboard */,
 				B80164341D9D77D900F9A0BF /* HomeViewController.swift */,
 			);
@@ -157,10 +170,22 @@
 			path = "Profile(我的)";
 			sourceTree = "<group>";
 		};
+		B83A77551DA0E99900F4A8CD /* UIPopover */ = {
+			isa = PBXGroup;
+			children = (
+				B83A77581DA0E9F300F4A8CD /* PopoverViewController.swift */,
+				B83A77591DA0E9F300F4A8CD /* PopoverViewController.xib */,
+				B83A775C1DA0EFE500F4A8CD /* WBPresentationController.swift */,
+				B84118801DA163450014DCDD /* PopoverViewAnimation.swift */,
+			);
+			path = UIPopover;
+			sourceTree = "<group>";
+		};
 		B83C32C71D9E4074007D7C3B /* Tools(工具) */ = {
 			isa = PBXGroup;
 			children = (
 				B83C32C81D9E40AE007D7C3B /* Category */,
+				B83A77531DA0E41A00F4A8CD /* TitleButton.swift */,
 			);
 			path = "Tools(工具)";
 			sourceTree = "<group>";
@@ -169,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				B83C32C91D9E40DB007D7C3B /* UIButton-Extension.swift */,
+				B83A77511DA0E0AE00F4A8CD /* UIBarButtonItem-Extension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -347,6 +373,7 @@
 			files = (
 				B83C32C61D9E2943007D7C3B /* Null.storyboard in Resources */,
 				B83C32D41D9E4E9B007D7C3B /* VistorView.xib in Resources */,
+				B83A775B1DA0E9F300F4A8CD /* PopoverViewController.xib in Resources */,
 				B83C32C31D9E1B44007D7C3B /* Profile.storyboard in Resources */,
 				B83C32BC1D9E1AD7007D7C3B /* Home.storyboard in Resources */,
 				B89933881D9D6E34005B56AD /* Assets.xcassets in Resources */,
@@ -377,9 +404,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B83A77521DA0E0AE00F4A8CD /* UIBarButtonItem-Extension.swift in Sources */,
 				B801643B1D9D780800F9A0BF /* ProfileViewController.swift in Sources */,
 				B83C32CA1D9E40DC007D7C3B /* UIButton-Extension.swift in Sources */,
+				B84118811DA163450014DCDD /* PopoverViewAnimation.swift in Sources */,
 				B83C32D21D9E4E6F007D7C3B /* VistorView.swift in Sources */,
+				B83A775A1DA0E9F300F4A8CD /* PopoverViewController.swift in Sources */,
+				B83A77541DA0E41A00F4A8CD /* TitleButton.swift in Sources */,
+				B83A775D1DA0EFE500F4A8CD /* WBPresentationController.swift in Sources */,
 				B89933811D9D6E34005B56AD /* AppDelegate.swift in Sources */,
 				B801642D1D9D761900F9A0BF /* MainViewController.swift in Sources */,
 				B80164371D9D77EB00F9A0BF /* MessageViewController.swift in Sources */,
