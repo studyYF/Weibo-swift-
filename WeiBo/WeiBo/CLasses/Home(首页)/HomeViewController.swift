@@ -27,8 +27,6 @@ class HomeViewController: BaseViewController {
         ///设置导航栏内容
         setUpNavigationBar()
     }
-
-
 }
 
 //MARK: - 设置UI界面
@@ -62,7 +60,9 @@ extension HomeViewController {
 //MARK: - 事件监听函数
 extension HomeViewController {
     @objc private func titleButtonClick() {
-        
+        HTTPRequestTool.shareInstance.request(.POST, urlString: "http://httpbin.org/post", paramters: ["name" : "yangfan" ,"age" : 18]) { (result, error) -> () in
+            print(result,error)
+        }
         //弹出自定义控制器
         let popVC = PopoverViewController()
         popVC.modalPresentationStyle = .Custom
