@@ -13,7 +13,7 @@ class BaseViewController: UITableViewController {
     //MARK - 懒加载属性
     lazy var vistorView : VistorView = VistorView.vistorView()
     //MARK: - 定义变量
-    var isLogin : Bool = true
+    var isLogin : Bool = false
     //MARK: - 重写loadView方法
     override func loadView() {
         isLogin ? super.loadView() : setupVistorView()
@@ -44,11 +44,13 @@ extension BaseViewController {
 
 ////MARK: - 事件监听
 extension BaseViewController {
-    ///注册
-    @objc private func loginButtonClick() {
-        
-    }
     ///登录
+    @objc private func loginButtonClick() {
+        let vc = OAuthViewController()
+        let nav = UINavigationController(rootViewController: vc)
+        presentViewController(nav, animated: true, completion: nil)
+    }
+    ///注册
     @objc private func registerButtonClick() {
         
     }

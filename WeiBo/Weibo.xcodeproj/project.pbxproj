@@ -15,6 +15,10 @@
 		B80164371D9D77EB00F9A0BF /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80164361D9D77EB00F9A0BF /* MessageViewController.swift */; };
 		B80164391D9D77F900F9A0BF /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80164381D9D77F900F9A0BF /* DiscoverViewController.swift */; };
 		B801643B1D9D780800F9A0BF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B801643A1D9D780800F9A0BF /* ProfileViewController.swift */; };
+		B817C6341DA28993008AB6F8 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B817C6321DA28993008AB6F8 /* OAuthViewController.swift */; };
+		B817C6351DA28993008AB6F8 /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B817C6331DA28993008AB6F8 /* OAuthViewController.xib */; };
+		B817C6371DA28FC3008AB6F8 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B817C6361DA28FC3008AB6F8 /* Common.swift */; };
+		B817C6391DA29C24008AB6F8 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = B817C6381DA29C24008AB6F8 /* UserAccount.swift */; };
 		B83A77521DA0E0AE00F4A8CD /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A77511DA0E0AE00F4A8CD /* UIBarButtonItem-Extension.swift */; };
 		B83A77541DA0E41A00F4A8CD /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A77531DA0E41A00F4A8CD /* TitleButton.swift */; };
 		B83A775A1DA0E9F300F4A8CD /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A77581DA0E9F300F4A8CD /* PopoverViewController.swift */; };
@@ -67,8 +71,12 @@
 		B80164361D9D77EB00F9A0BF /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		B80164381D9D77F900F9A0BF /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		B801643A1D9D780800F9A0BF /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B817C6321DA28993008AB6F8 /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
+		B817C6331DA28993008AB6F8 /* OAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
+		B817C6361DA28FC3008AB6F8 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		B817C6381DA29C24008AB6F8 /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		B83A77511DA0E0AE00F4A8CD /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
-		B83A77531DA0E41A00F4A8CD /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
+		B83A77531DA0E41A00F4A8CD /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitleButton.swift; path = ../TitleButton.swift; sourceTree = "<group>"; };
 		B83A77581DA0E9F300F4A8CD /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		B83A77591DA0E9F300F4A8CD /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 		B83A775C1DA0EFE500F4A8CD /* WBPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBPresentationController.swift; sourceTree = "<group>"; };
@@ -187,6 +195,7 @@
 			children = (
 				B83C32CB1D9E4B9B007D7C3B /* Resource */,
 				B83C32CC1D9E4B9B007D7C3B /* VistorView */,
+				B817C6311DA28972008AB6F8 /* OAuth */,
 				B801642C1D9D761900F9A0BF /* MainViewController.swift */,
 			);
 			path = "Main(主要)";
@@ -210,6 +219,16 @@
 			path = "Profile(我的)";
 			sourceTree = "<group>";
 		};
+		B817C6311DA28972008AB6F8 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				B817C6321DA28993008AB6F8 /* OAuthViewController.swift */,
+				B817C6331DA28993008AB6F8 /* OAuthViewController.xib */,
+				B817C6381DA29C24008AB6F8 /* UserAccount.swift */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
 		B83A77551DA0E99900F4A8CD /* UIPopover */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,8 +244,6 @@
 			isa = PBXGroup;
 			children = (
 				B8FE6F751DA25024006DC08F /* HTTPTools */,
-				B83C32C81D9E40AE007D7C3B /* Category */,
-				B83A77531DA0E41A00F4A8CD /* TitleButton.swift */,
 			);
 			path = "Tools(工具)";
 			sourceTree = "<group>";
@@ -237,7 +254,8 @@
 				B83C32C91D9E40DB007D7C3B /* UIButton-Extension.swift */,
 				B83A77511DA0E0AE00F4A8CD /* UIBarButtonItem-Extension.swift */,
 			);
-			path = Category;
+			name = Category;
+			path = ../Category;
 			sourceTree = "<group>";
 		};
 		B83C32CB1D9E4B9B007D7C3B /* Resource */ = {
@@ -313,6 +331,9 @@
 		B8FE6F751DA25024006DC08F /* HTTPTools */ = {
 			isa = PBXGroup;
 			children = (
+				B83C32C81D9E40AE007D7C3B /* Category */,
+				B83A77531DA0E41A00F4A8CD /* TitleButton.swift */,
+				B817C6361DA28FC3008AB6F8 /* Common.swift */,
 				B8FE6F761DA25066006DC08F /* HTTPRequestTool.swift */,
 			);
 			path = HTTPTools;
@@ -430,6 +451,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B817C6351DA28993008AB6F8 /* OAuthViewController.xib in Resources */,
 				B83C32C61D9E2943007D7C3B /* Null.storyboard in Resources */,
 				B83C32D41D9E4E9B007D7C3B /* VistorView.xib in Resources */,
 				B83A775B1DA0E9F300F4A8CD /* PopoverViewController.xib in Resources */,
@@ -586,10 +608,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B817C6371DA28FC3008AB6F8 /* Common.swift in Sources */,
 				B83A77521DA0E0AE00F4A8CD /* UIBarButtonItem-Extension.swift in Sources */,
+				B817C6391DA29C24008AB6F8 /* UserAccount.swift in Sources */,
 				B801643B1D9D780800F9A0BF /* ProfileViewController.swift in Sources */,
 				B83C32CA1D9E40DC007D7C3B /* UIButton-Extension.swift in Sources */,
 				B84118811DA163450014DCDD /* PopoverViewAnimation.swift in Sources */,
+				B817C6341DA28993008AB6F8 /* OAuthViewController.swift in Sources */,
 				B83C32D21D9E4E6F007D7C3B /* VistorView.swift in Sources */,
 				B83A775A1DA0E9F300F4A8CD /* PopoverViewController.swift in Sources */,
 				B83A77541DA0E41A00F4A8CD /* TitleButton.swift in Sources */,
