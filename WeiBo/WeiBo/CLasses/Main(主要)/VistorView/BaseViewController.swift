@@ -13,15 +13,26 @@ class BaseViewController: UITableViewController {
     //MARK - 懒加载属性
     lazy var vistorView : VistorView = VistorView.vistorView()
     //MARK: - 定义变量
-    var isLogin : Bool = false
+    var isLogin : Bool = UserAccountTool.shareInstances.isLogin
     //MARK: - 重写loadView方法
     override func loadView() {
+//        //获取本地缓存的用户信息文件
+//        var accountPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).last!
+//        accountPath = (accountPath as NSString).stringByAppendingPathComponent("account.plist")
+//        let account = NSKeyedUnarchiver.unarchiveObjectWithFile(accountPath) as? UserAccount
+//        //判断是否有保存文件,
+//        if let account = account {
+//            //判断accessToken是否过期
+//            if let expires_date = account.expires_date {
+//                isLogin = expires_date.compare(NSDate()) == NSComparisonResult.OrderedDescending
+//            }
+//            
+//        }
         isLogin ? super.loadView() : setupVistorView()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setNavUI()
     }
 

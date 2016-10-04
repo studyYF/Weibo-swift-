@@ -30,6 +30,7 @@ class VistorView: UIView {
         rotationView.hidden = true
     }
     
+    //MARK: - 旋转动画
     func setAnimation() {
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
         rotationAnimation.fromValue = 0

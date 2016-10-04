@@ -75,6 +75,7 @@ extension OAuthViewController : UIWebViewDelegate {
         }
         let code = urlString.componentsSeparatedByString("code=").last!
         loadAccessToken(code)
+        
         return false
     }
 }
@@ -115,7 +116,17 @@ extension OAuthViewController {
                 }
                 account.screen_name = userInfoDict["screen_name"] as? String
                 account.avatar_large = userInfoDict["avatar_large"] as? String
-                print(account)
+                //归档
+//                var accountPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).last!
+//                accountPath = (accountPath as NSString).stringByAppendingPathComponent("account.plist")
+                NSKeyedArchiver.archiveRootObject(account, toFile: UserAccountTool.shareInstances.accountPath)
+                UserAccountTool.shareInstances.account = account
+                
+                ///退出当前控制器,弹出欢迎页面
+                self.dismissViewControllerAnimated(false, completion: { () -> Void in
+                     UIApplication.sharedApplication().keyWindow?.rootViewController = WelcomeViewController()
+                })
+                
             }
         }
     }

@@ -39,6 +39,11 @@
 		B89933881D9D6E34005B56AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B89933871D9D6E34005B56AD /* Assets.xcassets */; };
 		B89933961D9D6E34005B56AD /* WeiBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89933951D9D6E34005B56AD /* WeiBoTests.swift */; };
 		B89933A11D9D6E34005B56AD /* WeiBoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89933A01D9D6E34005B56AD /* WeiBoUITests.swift */; };
+		B8B2DF641DA3909300AC70B1 /* UserAccountTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B2DF631DA3909300AC70B1 /* UserAccountTool.swift */; };
+		B8B2DF681DA3CFD400AC70B1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B2DF661DA3CFD400AC70B1 /* WelcomeViewController.swift */; };
+		B8B2DF691DA3CFD400AC70B1 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8B2DF671DA3CFD400AC70B1 /* WelcomeViewController.xib */; };
+		B8B2DF6C1DA3E8D000AC70B1 /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B2DF6B1DA3E8D000AC70B1 /* StatusModel.swift */; };
+		B8B2DF6E1DA4032E00AC70B1 /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B2DF6D1DA4032E00AC70B1 /* NSDate-Extension.swift */; };
 		B8FE6F771DA25066006DC08F /* HTTPRequestTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FE6F761DA25066006DC08F /* HTTPRequestTool.swift */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +106,11 @@
 		B899339C1D9D6E34005B56AD /* WeiBoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeiBoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89933A01D9D6E34005B56AD /* WeiBoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiBoUITests.swift; sourceTree = "<group>"; };
 		B89933A21D9D6E34005B56AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8B2DF631DA3909300AC70B1 /* UserAccountTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountTool.swift; sourceTree = "<group>"; };
+		B8B2DF661DA3CFD400AC70B1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		B8B2DF671DA3CFD400AC70B1 /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		B8B2DF6B1DA3E8D000AC70B1 /* StatusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
+		B8B2DF6D1DA4032E00AC70B1 /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDate-Extension.swift"; path = "../HTTPTools/NSDate-Extension.swift"; sourceTree = "<group>"; };
 		B8FE6F761DA25066006DC08F /* HTTPRequestTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestTool.swift; sourceTree = "<group>"; };
 		D2C9C42336C1762F39A758C5 /* Pods-WeiBoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeiBoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeiBoUITests/Pods-WeiBoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F3D74B9FE996942BCD16B33A /* Pods-WeiBo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeiBo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeiBo/Pods-WeiBo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -183,6 +193,7 @@
 		B80164281D9D747300F9A0BF /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
+				B8B2DF6A1DA3E8B600AC70B1 /* HomeModel */,
 				B83A77551DA0E99900F4A8CD /* UIPopover */,
 				B83C32BA1D9E1AD7007D7C3B /* Home.storyboard */,
 				B80164341D9D77D900F9A0BF /* HomeViewController.swift */,
@@ -193,6 +204,7 @@
 		B80164291D9D747300F9A0BF /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				B8B2DF651DA3CFBE00AC70B1 /* Welcome */,
 				B83C32CB1D9E4B9B007D7C3B /* Resource */,
 				B83C32CC1D9E4B9B007D7C3B /* VistorView */,
 				B817C6311DA28972008AB6F8 /* OAuth */,
@@ -225,6 +237,7 @@
 				B817C6321DA28993008AB6F8 /* OAuthViewController.swift */,
 				B817C6331DA28993008AB6F8 /* OAuthViewController.xib */,
 				B817C6381DA29C24008AB6F8 /* UserAccount.swift */,
+				B8B2DF631DA3909300AC70B1 /* UserAccountTool.swift */,
 			);
 			path = OAuth;
 			sourceTree = "<group>";
@@ -253,6 +266,7 @@
 			children = (
 				B83C32C91D9E40DB007D7C3B /* UIButton-Extension.swift */,
 				B83A77511DA0E0AE00F4A8CD /* UIBarButtonItem-Extension.swift */,
+				B8B2DF6D1DA4032E00AC70B1 /* NSDate-Extension.swift */,
 			);
 			name = Category;
 			path = ../Category;
@@ -326,6 +340,23 @@
 				B89933A21D9D6E34005B56AD /* Info.plist */,
 			);
 			path = WeiBoUITests;
+			sourceTree = "<group>";
+		};
+		B8B2DF651DA3CFBE00AC70B1 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				B8B2DF661DA3CFD400AC70B1 /* WelcomeViewController.swift */,
+				B8B2DF671DA3CFD400AC70B1 /* WelcomeViewController.xib */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		B8B2DF6A1DA3E8B600AC70B1 /* HomeModel */ = {
+			isa = PBXGroup;
+			children = (
+				B8B2DF6B1DA3E8D000AC70B1 /* StatusModel.swift */,
+			);
+			path = HomeModel;
 			sourceTree = "<group>";
 		};
 		B8FE6F751DA25024006DC08F /* HTTPTools */ = {
@@ -456,6 +487,7 @@
 				B83C32D41D9E4E9B007D7C3B /* VistorView.xib in Resources */,
 				B83A775B1DA0E9F300F4A8CD /* PopoverViewController.xib in Resources */,
 				B83C32C31D9E1B44007D7C3B /* Profile.storyboard in Resources */,
+				B8B2DF691DA3CFD400AC70B1 /* WelcomeViewController.xib in Resources */,
 				B83C32BC1D9E1AD7007D7C3B /* Home.storyboard in Resources */,
 				B89933881D9D6E34005B56AD /* Assets.xcassets in Resources */,
 				B83C32C11D9E1B36007D7C3B /* Discover.storyboard in Resources */,
@@ -609,14 +641,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				B817C6371DA28FC3008AB6F8 /* Common.swift in Sources */,
+				B8B2DF681DA3CFD400AC70B1 /* WelcomeViewController.swift in Sources */,
 				B83A77521DA0E0AE00F4A8CD /* UIBarButtonItem-Extension.swift in Sources */,
+				B8B2DF6C1DA3E8D000AC70B1 /* StatusModel.swift in Sources */,
 				B817C6391DA29C24008AB6F8 /* UserAccount.swift in Sources */,
 				B801643B1D9D780800F9A0BF /* ProfileViewController.swift in Sources */,
 				B83C32CA1D9E40DC007D7C3B /* UIButton-Extension.swift in Sources */,
+				B8B2DF641DA3909300AC70B1 /* UserAccountTool.swift in Sources */,
 				B84118811DA163450014DCDD /* PopoverViewAnimation.swift in Sources */,
 				B817C6341DA28993008AB6F8 /* OAuthViewController.swift in Sources */,
 				B83C32D21D9E4E6F007D7C3B /* VistorView.swift in Sources */,
 				B83A775A1DA0E9F300F4A8CD /* PopoverViewController.swift in Sources */,
+				B8B2DF6E1DA4032E00AC70B1 /* NSDate-Extension.swift in Sources */,
 				B83A77541DA0E41A00F4A8CD /* TitleButton.swift in Sources */,
 				B83A775D1DA0EFE500F4A8CD /* WBPresentationController.swift in Sources */,
 				B89933811D9D6E34005B56AD /* AppDelegate.swift in Sources */,

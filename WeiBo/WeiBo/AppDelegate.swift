@@ -11,11 +11,18 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var defaultViewController : UIViewController? {
+        let isLogin = UserAccountTool.shareInstances.isLogin
+        return isLogin ? WelcomeViewController() : UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+    }
     var window: UIWindow?
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         //设置全局tabbar颜色
         UITabBar.appearance().tintColor = UIColor.orangeColor()
         UINavigationBar.appearance().tintColor = UIColor.orangeColor()
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window?.rootViewController = defaultViewController
+        window?.makeKeyAndVisible()
         return true
     }
 

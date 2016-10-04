@@ -22,6 +22,7 @@ class TitleButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    //MARK: - 对button的label和imageView的位置进行调整
     override func layoutSubviews() {
         super.layoutSubviews()
         titleLabel!.frame.origin.x = 0

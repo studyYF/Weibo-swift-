@@ -72,3 +72,20 @@ extension HTTPRequestTool {
         }
     }
 }
+
+//MARK: - 请求首页数据
+extension HTTPRequestTool {
+    func loadStatuses(finished : (result : [[String : AnyObject]]?, error : NSError?) -> ()) {
+        let urlString = "https://api.weibo.com/2/statuses/home_timeline.json"
+        let param = ["access_token" : (UserAccountTool.shareInstances.account?.access_token)!]
+        request(.GET, urlString: urlString, parameters: param) { (result, error) -> () in
+            //根据返回的数据,将得到的数据转成字典
+            guard let resultDict = result as? [String : AnyObject] else {
+                finished(result: nil, error: error)
+                return
+            }
+            //将字典中statuses字段对应的数组提取出来,用于回调
+            finished(result: resultDict["statuses"] as? [[String : AnyObject]], error: error)
+        }
+    }
+}
