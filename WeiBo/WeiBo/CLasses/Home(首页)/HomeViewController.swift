@@ -16,7 +16,7 @@ class HomeViewController: BaseViewController {
     private lazy var popoverAnimation : PopoverViewAnimation = PopoverViewAnimation { [weak self] (isPresented) -> () in
          self!.titleButton.selected = isPresented
     }
-    private lazy var statusesArray : [StatusModel] = [StatusModel]()
+    private lazy var statusesArray : [StatusViewModel] = [StatusViewModel]()
     
     //MARK: - 系统会掉函数
     override func viewDidLoad() {
@@ -91,7 +91,8 @@ extension HomeViewController {
             ///遍历微博对应的字典
             for statuses in resultArray {
                 let status = StatusModel(dict: statuses)
-                self.statusesArray.append(status)
+                let statusViewModel = StatusViewModel(status: status)
+                self.statusesArray.append(statusViewModel)
                 self.tableView.reloadData()
             }
         }
@@ -106,7 +107,7 @@ extension HomeViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCellWithIdentifier("HomeCell")!
-        cell.textLabel?.text = statusesArray[indexPath.row].createAtText
+        cell.textLabel?.text = statusesArray[indexPath.row].sourceText
         return cell
     }
 }
