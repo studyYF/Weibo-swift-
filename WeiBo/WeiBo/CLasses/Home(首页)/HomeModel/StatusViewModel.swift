@@ -21,6 +21,8 @@ class StatusViewModel: NSObject {
     var verified_image : UIImage?
     ///会员等级图片
     var mbrank_image : UIImage?
+    ///用户头像地址
+    var profileURL : NSURL?
     
     //MARK: - 自定义构造函数
     init(status : StatusModel) {
@@ -62,6 +64,9 @@ extension StatusViewModel {
         if mbrank > 0 && mbrank <= 6 {
             mbrank_image = UIImage(named: "common_icon_membership_level\(mbrank)")
         }
+        //5.处理用户头像url
+        let profile_image_url = status.user?.profile_image_url ?? ""
+        profileURL = NSURL(string: profile_image_url)
     }
 }
 

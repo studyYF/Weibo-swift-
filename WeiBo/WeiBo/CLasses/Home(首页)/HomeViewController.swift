@@ -29,6 +29,12 @@ class HomeViewController: BaseViewController {
         ///设置导航栏内容
         setUpNavigationBar()
         loadHomeData()
+        
+        //MARK: - 设置tableView自适应高度
+        //设置tableView,让它根据约束自动计算高度
+        tableView.rowHeight = UITableViewAutomaticDimension
+        //必须先设置一个初始预估高度
+        tableView.estimatedRowHeight = 200
     }
 }
 
@@ -106,8 +112,8 @@ extension HomeViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-         let cell = tableView.dequeueReusableCellWithIdentifier("HomeCell")!
-        cell.textLabel?.text = statusesArray[indexPath.row].sourceText
+        let cell : HomeViewCell = tableView.dequeueReusableCellWithIdentifier("HomeCell") as! HomeViewCell
+        cell.viewModel = statusesArray[indexPath.row]
         return cell
     }
 }
