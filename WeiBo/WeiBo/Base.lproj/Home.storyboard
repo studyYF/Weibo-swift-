@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--首页-->
@@ -24,7 +23,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_default_small" translatesAutoresizingMaskIntoConstraints="NO" id="g9O-A9-GXB" userLabel="头像">
-                                            <rect key="frame" x="23" y="18" width="40" height="40"/>
+                                            <rect key="frame" x="15" y="10" width="40" height="40"/>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="U3E-k9-cq9"/>
@@ -38,7 +37,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_vip" translatesAutoresizingMaskIntoConstraints="NO" id="CsV-7l-YSr" userLabel="用户类型图片">
-                                            <rect key="frame" x="46" y="41" width="17" height="17"/>
+                                            <rect key="frame" x="38" y="33" width="17" height="17"/>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="17" id="4Io-5h-Zqb"/>
@@ -46,14 +45,14 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJv-du-4Po" userLabel="用户名label">
-                                            <rect key="frame" x="78" y="18" width="38" height="18"/>
+                                            <rect key="frame" x="70" y="10" width="38" height="18"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_icon_membership_level1" translatesAutoresizingMaskIntoConstraints="NO" id="mkO-Zh-LKL" userLabel="用户等级">
-                                            <rect key="frame" x="126" y="20" width="14" height="14"/>
+                                            <rect key="frame" x="118" y="12" width="14" height="14"/>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="14" id="Dj3-Gh-4zu"/>
@@ -61,21 +60,21 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ann-Rb-TcD" userLabel="发布时间label">
-                                            <rect key="frame" x="78" y="43" width="31" height="15"/>
+                                            <rect key="frame" x="70" y="35" width="31" height="15"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKT-cU-P3y" userLabel="来源label">
-                                            <rect key="frame" x="119" y="43" width="31" height="15"/>
+                                            <rect key="frame" x="111" y="35" width="31" height="15"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wg-p0-5zK" userLabel="微博正文label">
-                                            <rect key="frame" x="23" y="73" width="42" height="94"/>
+                                            <rect key="frame" x="15" y="65" width="42" height="17"/>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="42" id="BEN-GA-jUJ"/>
@@ -163,6 +162,49 @@
                                                 <constraint firstItem="o7i-R8-TyY" firstAttribute="leading" secondItem="abv-fU-Gnu" secondAttribute="trailing" id="zYI-04-GbT"/>
                                             </constraints>
                                         </view>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GkA-6d-hFW" customClass="PictureCollectionView" customModule="WeiBo" customModuleProvider="target">
+                                            <rect key="frame" x="15" y="97" width="204" height="70"/>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="204" id="DMB-Qs-SZz"/>
+                                                <constraint firstAttribute="height" constant="70" id="qwP-Rb-P4w"/>
+                                            </constraints>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1ZW-Vz-ndp">
+                                                <size key="itemSize" width="50" height="50"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PictureCell" id="uvs-1L-qSJ" customClass="PictureCollectionViewCell" customModule="WeiBo" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EXA-7R-X8T">
+                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                <animations/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <animations/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstItem="EXA-7R-X8T" firstAttribute="top" secondItem="uvs-1L-qSJ" secondAttribute="top" id="ADl-NQ-Phk"/>
+                                                        <constraint firstItem="EXA-7R-X8T" firstAttribute="leading" secondItem="uvs-1L-qSJ" secondAttribute="leading" id="AfQ-4J-Sw5"/>
+                                                        <constraint firstAttribute="trailing" secondItem="EXA-7R-X8T" secondAttribute="trailing" id="OMO-KQ-qMq"/>
+                                                        <constraint firstAttribute="bottom" secondItem="EXA-7R-X8T" secondAttribute="bottom" id="q2x-VX-ekF"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="picImgv" destination="EXA-7R-X8T" id="twV-3a-D8Z"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
                                     </subviews>
                                     <animations/>
                                     <constraints>
@@ -172,18 +214,20 @@
                                         <constraint firstItem="4wg-p0-5zK" firstAttribute="top" secondItem="CsV-7l-YSr" secondAttribute="bottom" constant="15" id="8af-JR-y9K"/>
                                         <constraint firstItem="CsV-7l-YSr" firstAttribute="trailing" secondItem="g9O-A9-GXB" secondAttribute="trailing" id="9Fv-mE-dUD"/>
                                         <constraint firstItem="iKT-cU-P3y" firstAttribute="leading" secondItem="Ann-Rb-TcD" secondAttribute="trailing" constant="10" id="Auq-KQ-Z33"/>
+                                        <constraint firstItem="g9O-A9-GXB" firstAttribute="leading" secondItem="zsJ-Ji-voq" secondAttribute="leading" constant="15" id="BNN-eh-RHy"/>
                                         <constraint firstAttribute="bottom" secondItem="Wqm-2F-I68" secondAttribute="bottom" id="BYT-M9-voT"/>
                                         <constraint firstItem="4wg-p0-5zK" firstAttribute="leading" secondItem="g9O-A9-GXB" secondAttribute="leading" id="E57-8S-Fzt"/>
-                                        <constraint firstItem="g9O-A9-GXB" firstAttribute="leading" secondItem="zsJ-Ji-voq" secondAttribute="leadingMargin" constant="15" id="VPh-ui-ldU"/>
-                                        <constraint firstItem="g9O-A9-GXB" firstAttribute="top" secondItem="zsJ-Ji-voq" secondAttribute="topMargin" constant="10" id="WB0-gs-3AB"/>
                                         <constraint firstItem="Ann-Rb-TcD" firstAttribute="leading" secondItem="bJv-du-4Po" secondAttribute="leading" id="WYe-a4-jdN"/>
                                         <constraint firstItem="bJv-du-4Po" firstAttribute="top" secondItem="g9O-A9-GXB" secondAttribute="top" id="Xgw-kO-0mi"/>
                                         <constraint firstItem="iKT-cU-P3y" firstAttribute="top" secondItem="Ann-Rb-TcD" secondAttribute="top" id="Ygz-O9-wpG"/>
+                                        <constraint firstItem="GkA-6d-hFW" firstAttribute="leading" secondItem="g9O-A9-GXB" secondAttribute="leading" id="cI8-if-GkA"/>
+                                        <constraint firstItem="GkA-6d-hFW" firstAttribute="top" secondItem="4wg-p0-5zK" secondAttribute="bottom" constant="15" id="ccj-Nf-sAx"/>
+                                        <constraint firstItem="g9O-A9-GXB" firstAttribute="top" secondItem="zsJ-Ji-voq" secondAttribute="top" constant="10" id="h1A-jM-AyP"/>
                                         <constraint firstItem="Ann-Rb-TcD" firstAttribute="bottom" secondItem="g9O-A9-GXB" secondAttribute="bottom" id="hCg-hi-luo"/>
                                         <constraint firstAttribute="trailing" secondItem="Wqm-2F-I68" secondAttribute="trailing" id="lDu-gs-cm7"/>
                                         <constraint firstItem="CsV-7l-YSr" firstAttribute="bottom" secondItem="g9O-A9-GXB" secondAttribute="bottom" id="qE9-YS-NYV"/>
                                         <constraint firstItem="Wqm-2F-I68" firstAttribute="leading" secondItem="zsJ-Ji-voq" secondAttribute="leading" id="vzI-z9-jHu"/>
-                                        <constraint firstItem="Wqm-2F-I68" firstAttribute="top" secondItem="4wg-p0-5zK" secondAttribute="bottom" constant="10" id="zp4-29-Wpz"/>
+                                        <constraint firstItem="Wqm-2F-I68" firstAttribute="top" secondItem="GkA-6d-hFW" secondAttribute="bottom" priority="800" constant="10" id="ynM-uK-7bp"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -199,6 +243,9 @@
                                     <outlet property="createdAtLabel" destination="Ann-Rb-TcD" id="dbo-vH-Tb3"/>
                                     <outlet property="iconImgv" destination="g9O-A9-GXB" id="3sx-84-znd"/>
                                     <outlet property="mbrankLabel" destination="mkO-Zh-LKL" id="VVa-CH-3Ar"/>
+                                    <outlet property="picCollectionVieHeightCons" destination="qwP-Rb-P4w" id="ohh-sp-vyK"/>
+                                    <outlet property="picCollectionView" destination="GkA-6d-hFW" id="5Qf-O5-x7u"/>
+                                    <outlet property="picCollectionViewWidthCons" destination="DMB-Qs-SZz" id="bhA-sx-EJr"/>
                                     <outlet property="screenNameLabel" destination="bJv-du-4Po" id="970-9l-en0"/>
                                     <outlet property="sourceLabel" destination="iKT-cU-P3y" id="FJo-2W-DVy"/>
                                     <outlet property="verifiedTypeImgv" destination="CsV-7l-YSr" id="5IP-ct-xbK"/>

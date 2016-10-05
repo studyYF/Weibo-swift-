@@ -99,8 +99,8 @@ extension HomeViewController {
                 let status = StatusModel(dict: statuses)
                 let statusViewModel = StatusViewModel(status: status)
                 self.statusesArray.append(statusViewModel)
-                self.tableView.reloadData()
             }
+            self.tableView.reloadData()
         }
     }
 }

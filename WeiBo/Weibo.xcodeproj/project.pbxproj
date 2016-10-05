@@ -22,6 +22,7 @@
 		B83763B81DA4A0F800D85584 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83763B71DA4A0F800D85584 /* User.swift */; };
 		B83763BC1DA4A6D400D85584 /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83763BB1DA4A6D400D85584 /* StatusViewModel.swift */; };
 		B83763BF1DA4B33900D85584 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83763BE1DA4B33900D85584 /* HomeViewCell.swift */; };
+		B83763C11DA4D90B00D85584 /* PictureCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83763C01DA4D90B00D85584 /* PictureCollectionView.swift */; };
 		B83A77521DA0E0AE00F4A8CD /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A77511DA0E0AE00F4A8CD /* UIBarButtonItem-Extension.swift */; };
 		B83A77541DA0E41A00F4A8CD /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A77531DA0E41A00F4A8CD /* TitleButton.swift */; };
 		B83A775A1DA0E9F300F4A8CD /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A77581DA0E9F300F4A8CD /* PopoverViewController.swift */; };
@@ -86,6 +87,7 @@
 		B83763B71DA4A0F800D85584 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B83763BB1DA4A6D400D85584 /* StatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
 		B83763BE1DA4B33900D85584 /* HomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		B83763C01DA4D90B00D85584 /* PictureCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureCollectionView.swift; sourceTree = "<group>"; };
 		B83A77511DA0E0AE00F4A8CD /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		B83A77531DA0E41A00F4A8CD /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitleButton.swift; path = ../TitleButton.swift; sourceTree = "<group>"; };
 		B83A77581DA0E9F300F4A8CD /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
@@ -199,7 +201,7 @@
 		B80164281D9D747300F9A0BF /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
-				B83763BD1DA4B32300D85584 /* HomeCell */,
+				B83763BD1DA4B32300D85584 /* HomeView */,
 				B8B2DF6A1DA3E8B600AC70B1 /* HomeModel */,
 				B83A77551DA0E99900F4A8CD /* UIPopover */,
 				B83C32BA1D9E1AD7007D7C3B /* Home.storyboard */,
@@ -249,11 +251,13 @@
 			path = OAuth;
 			sourceTree = "<group>";
 		};
-		B83763BD1DA4B32300D85584 /* HomeCell */ = {
+		B83763BD1DA4B32300D85584 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
 				B83763BE1DA4B33900D85584 /* HomeViewCell.swift */,
+				B83763C01DA4D90B00D85584 /* PictureCollectionView.swift */,
 			);
+			name = HomeView;
 			path = HomeCell;
 			sourceTree = "<group>";
 		};
@@ -674,6 +678,7 @@
 				B83A775D1DA0EFE500F4A8CD /* WBPresentationController.swift in Sources */,
 				B89933811D9D6E34005B56AD /* AppDelegate.swift in Sources */,
 				B83763BC1DA4A6D400D85584 /* StatusViewModel.swift in Sources */,
+				B83763C11DA4D90B00D85584 /* PictureCollectionView.swift in Sources */,
 				B83763BF1DA4B33900D85584 /* HomeViewCell.swift in Sources */,
 				B8FE6F771DA25066006DC08F /* HTTPRequestTool.swift in Sources */,
 				B801642D1D9D761900F9A0BF /* MainViewController.swift in Sources */,

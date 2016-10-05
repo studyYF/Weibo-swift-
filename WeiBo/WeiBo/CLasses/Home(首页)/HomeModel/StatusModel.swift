@@ -20,6 +20,8 @@ class StatusModel: NSObject {
     var mid : Int?
     ///用户属性
     var user : User?
+    ///配图属性
+    var pic_urls : [[String : String]]?
     
     //MARK: - 自定义函数
     init(dict : [String : AnyObject]) {
