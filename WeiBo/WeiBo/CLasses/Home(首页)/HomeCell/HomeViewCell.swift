@@ -22,6 +22,7 @@ class HomeViewCell: UITableViewCell {
     @IBOutlet weak var sourceLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var picCollectionView: PictureCollectionView!
+    @IBOutlet weak var retweetedContentLabel: UILabel!
     
     //MARK: - 约束的属性
     @IBOutlet weak var contentWidthConstraints: NSLayoutConstraint!
@@ -46,6 +47,13 @@ class HomeViewCell: UITableViewCell {
             picCollectionViewWidthCons.constant = picCollectionViewSize.width
             picCollectionVieHeightCons.constant = picCollectionViewSize.height
             picCollectionView.pictureURLs = viewModel.pictureURLs
+            if viewModel.status?.retweeted_status != nil {
+                if let screenName = viewModel.status?.retweeted_status?.user?.screen_name, retweetedContent = viewModel.status?.retweeted_status?.text {
+                    retweetedContentLabel.text = "@" + "\(screenName):" + retweetedContent
+                }
+            } else {
+                retweetedContentLabel.text = nil
+            }
         }
     }
     

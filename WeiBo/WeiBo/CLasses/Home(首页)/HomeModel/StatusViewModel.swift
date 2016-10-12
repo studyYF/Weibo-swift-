@@ -70,7 +70,8 @@ extension StatusViewModel {
         let profile_image_url = status.user?.profile_image_url ?? ""
         profileURL = NSURL(string: profile_image_url)
         //6.处理微博配图url
-        if let pic_urls = status.pic_urls {
+        let picURls = status.pic_urls!.count != 0 ? status.pic_urls : status.retweeted_status?.pic_urls
+        if let pic_urls = picURls {
             for picDict in pic_urls {
                 guard let urlString = picDict["thumbnail_pic"] else {
                     continue

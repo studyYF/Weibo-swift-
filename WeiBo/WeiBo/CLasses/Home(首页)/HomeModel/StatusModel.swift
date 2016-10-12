@@ -22,13 +22,20 @@ class StatusModel: NSObject {
     var user : User?
     ///配图属性
     var pic_urls : [[String : String]]?
+    ///转发微博
+    var retweeted_status : StatusModel?
     
     //MARK: - 自定义函数
     init(dict : [String : AnyObject]) {
         super.init()
         setValuesForKeysWithDictionary(dict)
+        ///将用户字典转成用户模型对象
          if let userDict = dict["user"] as? [String : AnyObject] {
             user = User(dict: userDict)
+        }
+        ///将转发微博字典转成转发微博模型
+        if let retweetedDict = dict["retweeted_status"] as? [String : AnyObject] {
+            retweeted_status = StatusModel(dict: retweetedDict)
         }
         
     }

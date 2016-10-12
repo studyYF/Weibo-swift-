@@ -9,17 +9,17 @@
         <scene sceneID="JjR-84-p63">
             <objects>
                 <tableViewController id="R6T-by-vGk" customClass="HomeViewController" customModule="WeiBo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="217" sectionHeaderHeight="28" sectionFooterHeight="28" id="aOE-JA-q38">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="322" sectionHeaderHeight="28" sectionFooterHeight="28" id="aOE-JA-q38">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HomeCell" rowHeight="217" id="xt2-fS-8ti" customClass="HomeViewCell" customModule="WeiBo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="217"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HomeCell" rowHeight="322" id="xt2-fS-8ti" customClass="HomeViewCell" customModule="WeiBo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="322"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xt2-fS-8ti" id="zsJ-Ji-voq">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="217"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="322"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_default_small" translatesAutoresizingMaskIntoConstraints="NO" id="g9O-A9-GXB" userLabel="头像">
@@ -48,7 +48,7 @@
                                             <rect key="frame" x="70" y="10" width="38" height="18"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_icon_membership_level1" translatesAutoresizingMaskIntoConstraints="NO" id="mkO-Zh-LKL" userLabel="用户等级">
@@ -74,17 +74,17 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wg-p0-5zK" userLabel="微博正文label">
-                                            <rect key="frame" x="15" y="65" width="42" height="17"/>
+                                            <rect key="frame" x="15" y="65" width="42" height="18"/>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="42" id="BEN-GA-jUJ"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wqm-2F-I68">
-                                            <rect key="frame" x="0.0" y="177" width="600" height="40"/>
+                                            <rect key="frame" x="0.0" y="282" width="600" height="40"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vQ-wm-m0u">
                                                     <rect key="frame" x="0.0" y="1" width="200" height="32"/>
@@ -163,7 +163,7 @@
                                             </constraints>
                                         </view>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GkA-6d-hFW" customClass="PictureCollectionView" customModule="WeiBo" customModuleProvider="target">
-                                            <rect key="frame" x="15" y="97" width="204" height="70"/>
+                                            <rect key="frame" x="15" y="202" width="204" height="70"/>
                                             <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -205,6 +205,13 @@
                                                 </collectionViewCell>
                                             </cells>
                                         </collectionView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2UG-49-TPp">
+                                            <rect key="frame" x="15" y="98" width="42" height="89"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <animations/>
                                     <constraints>
@@ -220,12 +227,16 @@
                                         <constraint firstItem="Ann-Rb-TcD" firstAttribute="leading" secondItem="bJv-du-4Po" secondAttribute="leading" id="WYe-a4-jdN"/>
                                         <constraint firstItem="bJv-du-4Po" firstAttribute="top" secondItem="g9O-A9-GXB" secondAttribute="top" id="Xgw-kO-0mi"/>
                                         <constraint firstItem="iKT-cU-P3y" firstAttribute="top" secondItem="Ann-Rb-TcD" secondAttribute="top" id="Ygz-O9-wpG"/>
+                                        <constraint firstItem="2UG-49-TPp" firstAttribute="width" secondItem="4wg-p0-5zK" secondAttribute="width" id="Zi0-GK-DFP"/>
                                         <constraint firstItem="GkA-6d-hFW" firstAttribute="leading" secondItem="g9O-A9-GXB" secondAttribute="leading" id="cI8-if-GkA"/>
                                         <constraint firstItem="GkA-6d-hFW" firstAttribute="top" secondItem="4wg-p0-5zK" secondAttribute="bottom" constant="15" id="ccj-Nf-sAx"/>
                                         <constraint firstItem="g9O-A9-GXB" firstAttribute="top" secondItem="zsJ-Ji-voq" secondAttribute="top" constant="10" id="h1A-jM-AyP"/>
                                         <constraint firstItem="Ann-Rb-TcD" firstAttribute="bottom" secondItem="g9O-A9-GXB" secondAttribute="bottom" id="hCg-hi-luo"/>
                                         <constraint firstAttribute="trailing" secondItem="Wqm-2F-I68" secondAttribute="trailing" id="lDu-gs-cm7"/>
+                                        <constraint firstItem="2UG-49-TPp" firstAttribute="top" secondItem="4wg-p0-5zK" secondAttribute="bottom" constant="15" id="o99-7c-cGt"/>
                                         <constraint firstItem="CsV-7l-YSr" firstAttribute="bottom" secondItem="g9O-A9-GXB" secondAttribute="bottom" id="qE9-YS-NYV"/>
+                                        <constraint firstItem="2UG-49-TPp" firstAttribute="leading" secondItem="g9O-A9-GXB" secondAttribute="leading" id="qxx-o9-Nzb"/>
+                                        <constraint firstItem="GkA-6d-hFW" firstAttribute="top" secondItem="2UG-49-TPp" secondAttribute="bottom" constant="15" id="tIp-nc-37f"/>
                                         <constraint firstItem="Wqm-2F-I68" firstAttribute="leading" secondItem="zsJ-Ji-voq" secondAttribute="leading" id="vzI-z9-jHu"/>
                                         <constraint firstItem="Wqm-2F-I68" firstAttribute="top" secondItem="GkA-6d-hFW" secondAttribute="bottom" priority="800" constant="10" id="ynM-uK-7bp"/>
                                     </constraints>
@@ -235,6 +246,11 @@
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                     </userDefinedRuntimeAttributes>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="ccj-Nf-sAx"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
@@ -246,6 +262,7 @@
                                     <outlet property="picCollectionVieHeightCons" destination="qwP-Rb-P4w" id="ohh-sp-vyK"/>
                                     <outlet property="picCollectionView" destination="GkA-6d-hFW" id="5Qf-O5-x7u"/>
                                     <outlet property="picCollectionViewWidthCons" destination="DMB-Qs-SZz" id="bhA-sx-EJr"/>
+                                    <outlet property="retweetedContentLabel" destination="2UG-49-TPp" id="pbZ-wv-VAn"/>
                                     <outlet property="screenNameLabel" destination="bJv-du-4Po" id="970-9l-en0"/>
                                     <outlet property="sourceLabel" destination="iKT-cU-P3y" id="FJo-2W-DVy"/>
                                     <outlet property="verifiedTypeImgv" destination="CsV-7l-YSr" id="5IP-ct-xbK"/>
