@@ -23,6 +23,7 @@ class HomeViewCell: UITableViewCell {
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var picCollectionView: PictureCollectionView!
     @IBOutlet weak var retweetedContentLabel: UILabel!
+    @IBOutlet weak var retweetedBackView: UIView!
     
     //MARK: - 约束的属性
     @IBOutlet weak var contentWidthConstraints: NSLayoutConstraint!
@@ -50,9 +51,11 @@ class HomeViewCell: UITableViewCell {
             if viewModel.status?.retweeted_status != nil {
                 if let screenName = viewModel.status?.retweeted_status?.user?.screen_name, retweetedContent = viewModel.status?.retweeted_status?.text {
                     retweetedContentLabel.text = "@" + "\(screenName):" + retweetedContent
+                    retweetedBackView.hidden = false
                 }
             } else {
                 retweetedContentLabel.text = nil
+                retweetedBackView.hidden = true
             }
         }
     }

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--首页-->
@@ -83,6 +84,11 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfv-6U-BT5">
+                                            <rect key="frame" x="8" y="91" width="584" height="191"/>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wqm-2F-I68">
                                             <rect key="frame" x="0.0" y="282" width="600" height="40"/>
                                             <subviews>
@@ -224,20 +230,24 @@
                                         <constraint firstItem="g9O-A9-GXB" firstAttribute="leading" secondItem="zsJ-Ji-voq" secondAttribute="leading" constant="15" id="BNN-eh-RHy"/>
                                         <constraint firstAttribute="bottom" secondItem="Wqm-2F-I68" secondAttribute="bottom" id="BYT-M9-voT"/>
                                         <constraint firstItem="4wg-p0-5zK" firstAttribute="leading" secondItem="g9O-A9-GXB" secondAttribute="leading" id="E57-8S-Fzt"/>
+                                        <constraint firstItem="Wqm-2F-I68" firstAttribute="top" secondItem="kfv-6U-BT5" secondAttribute="bottom" id="Kk6-hU-85M"/>
                                         <constraint firstItem="Ann-Rb-TcD" firstAttribute="leading" secondItem="bJv-du-4Po" secondAttribute="leading" id="WYe-a4-jdN"/>
                                         <constraint firstItem="bJv-du-4Po" firstAttribute="top" secondItem="g9O-A9-GXB" secondAttribute="top" id="Xgw-kO-0mi"/>
                                         <constraint firstItem="iKT-cU-P3y" firstAttribute="top" secondItem="Ann-Rb-TcD" secondAttribute="top" id="Ygz-O9-wpG"/>
                                         <constraint firstItem="2UG-49-TPp" firstAttribute="width" secondItem="4wg-p0-5zK" secondAttribute="width" id="Zi0-GK-DFP"/>
                                         <constraint firstItem="GkA-6d-hFW" firstAttribute="leading" secondItem="g9O-A9-GXB" secondAttribute="leading" id="cI8-if-GkA"/>
                                         <constraint firstItem="GkA-6d-hFW" firstAttribute="top" secondItem="4wg-p0-5zK" secondAttribute="bottom" constant="15" id="ccj-Nf-sAx"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="kfv-6U-BT5" secondAttribute="trailing" id="dIr-Oo-krF"/>
                                         <constraint firstItem="g9O-A9-GXB" firstAttribute="top" secondItem="zsJ-Ji-voq" secondAttribute="top" constant="10" id="h1A-jM-AyP"/>
                                         <constraint firstItem="Ann-Rb-TcD" firstAttribute="bottom" secondItem="g9O-A9-GXB" secondAttribute="bottom" id="hCg-hi-luo"/>
+                                        <constraint firstItem="kfv-6U-BT5" firstAttribute="top" secondItem="4wg-p0-5zK" secondAttribute="bottom" constant="8" id="kcT-AV-wip"/>
                                         <constraint firstAttribute="trailing" secondItem="Wqm-2F-I68" secondAttribute="trailing" id="lDu-gs-cm7"/>
                                         <constraint firstItem="2UG-49-TPp" firstAttribute="top" secondItem="4wg-p0-5zK" secondAttribute="bottom" constant="15" id="o99-7c-cGt"/>
                                         <constraint firstItem="CsV-7l-YSr" firstAttribute="bottom" secondItem="g9O-A9-GXB" secondAttribute="bottom" id="qE9-YS-NYV"/>
                                         <constraint firstItem="2UG-49-TPp" firstAttribute="leading" secondItem="g9O-A9-GXB" secondAttribute="leading" id="qxx-o9-Nzb"/>
                                         <constraint firstItem="GkA-6d-hFW" firstAttribute="top" secondItem="2UG-49-TPp" secondAttribute="bottom" constant="15" id="tIp-nc-37f"/>
                                         <constraint firstItem="Wqm-2F-I68" firstAttribute="leading" secondItem="zsJ-Ji-voq" secondAttribute="leading" id="vzI-z9-jHu"/>
+                                        <constraint firstItem="kfv-6U-BT5" firstAttribute="leading" secondItem="zsJ-Ji-voq" secondAttribute="leadingMargin" id="xOx-uO-wgD"/>
                                         <constraint firstItem="Wqm-2F-I68" firstAttribute="top" secondItem="GkA-6d-hFW" secondAttribute="bottom" priority="800" constant="10" id="ynM-uK-7bp"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
@@ -262,6 +272,7 @@
                                     <outlet property="picCollectionVieHeightCons" destination="qwP-Rb-P4w" id="ohh-sp-vyK"/>
                                     <outlet property="picCollectionView" destination="GkA-6d-hFW" id="5Qf-O5-x7u"/>
                                     <outlet property="picCollectionViewWidthCons" destination="DMB-Qs-SZz" id="bhA-sx-EJr"/>
+                                    <outlet property="retweetedBackView" destination="kfv-6U-BT5" id="rzH-Rc-8WE"/>
                                     <outlet property="retweetedContentLabel" destination="2UG-49-TPp" id="pbZ-wv-VAn"/>
                                     <outlet property="screenNameLabel" destination="bJv-du-4Po" id="970-9l-en0"/>
                                     <outlet property="sourceLabel" destination="iKT-cU-P3y" id="FJo-2W-DVy"/>
