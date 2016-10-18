@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MJRefresh
 
 class HomeViewController: BaseViewController {
 
@@ -28,13 +29,13 @@ class HomeViewController: BaseViewController {
         }
         ///设置导航栏内容
         setUpNavigationBar()
-        loadHomeData()
-        
         //MARK: - 设置tableView自适应高度
         //设置tableView,让它根据约束自动计算高度
         tableView.rowHeight = UITableViewAutomaticDimension
         //必须先设置一个初始预估高度
         tableView.estimatedRowHeight = 200
+        //下载刷新
+        setRefresh()
     }
 }
 
@@ -65,6 +66,15 @@ extension HomeViewController {
 //        titleButton.sizeToFit()
         navigationItem.titleView = titleButton
     }
+    
+    private func setRefresh() {
+        let header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: "loadNewData")
+        header.setTitle("下拉刷新", forState: .Idle)
+        header.setTitle("松开刷新", forState: .Pulling)
+        header.setTitle("加载中...", forState: .Refreshing)
+        tableView.mj_header = header
+        tableView.mj_header.beginRefreshing()
+    }
 }
 
 //MARK: - 事件监听函数
@@ -85,6 +95,11 @@ extension HomeViewController {
 
 //MARK: - 请求首页数据
 extension HomeViewController {
+    //加载最新数据
+    @objc private func loadNewData() {
+        loadHomeData()
+    }
+    
     private func loadHomeData() {
         HTTPRequestTool.shareInstance.loadStatuses { (result, error) -> () in
             if error != nil {
@@ -101,6 +116,7 @@ extension HomeViewController {
                 self.statusesArray.append(statusViewModel)
             }
             self.tableView.reloadData()
+            self.tableView.mj_header.endRefreshing()
         }
     }
 }
